@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Over Sight — mini-drone de reconnaissance : caméra 360°, stabilisation, IA, transmission sécurisée." />
+    <title>Over Sight — Présentation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+
+  <body id="top" class="page page--presentation">
+    <div class="bg-orbs" aria-hidden="true">
+      <div class="orb orb--a"></div>
+      <div class="orb orb--b"></div>
+      <div class="orb orb--c"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="./index.html" aria-label="Over Sight">
+          <div class="brand__mark">◎</div>
+          <div class="brand__text">Over Sight</div>
+          <span class="badge badge--primary" data-i18n="badgeProject">Projet</span>
+        </a>
+
+        <nav class="nav">
+          <a class="nav__link" href="#presentation" data-i18n="navHome">Accueil</a>
+          <a class="nav__link" href="#problematique" data-i18n="navProblem">Problématique</a>
+          <a class="nav__link" href="#solution" data-i18n="navSolution">Solution</a>
+          <a class="nav__link" href="#fonctionnement" data-i18n="navHow">Fonctionnement</a>
+          <a class="nav__link" href="#architecture" data-i18n="navArch">Architecture</a>
+          <a class="nav__link" href="#features" data-i18n="navFeatures">Caractéristiques</a>
+          <a class="nav__link" href="#roadmap" data-i18n="navRoadmap">Évolutions</a>
+        </nav>
+
+        <div class="topbar__actions">
+          <button class="btn btn--ghost" id="langToggle" type="button" aria-label="Change language">
+            <span class="btn__icon">🌐</span>
+            <span id="langLabel">FR</span>
+          </button>
+
+          <button class="btn btn--ghost" id="themeToggle" type="button" aria-label="Toggle theme">
+            <span class="btn__icon">◐</span>
+            <span data-i18n="theme">Thème</span>
+          </button>
+
+          <a class="btn btn--primary" href="./progress.html">
+            <span class="btn__icon">▣</span>
+            <span data-i18n="ctaProgressTop">Voir l’avancement</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="presentation" class="hero hero--big">
+        <div class="container hero__grid">
+          <div class="hero__left">
+            <div class="kicker">
+              <span class="dot"></span>
+              <span data-i18n="kicker">EIP — Dispositif de reconnaissance</span>
+            </div>
+
+            <h1 class="hero__title">
+              <span class="grad">Over Sight</span><br />
+              <span data-i18n="heroTitle2">Mini-drone de reco + vision 360°</span>
+            </h1>
+
+            <p class="hero__subtitle" data-i18n="heroSubtitle">
+              Un drone compact lancé dans une pièce, capable de se stabiliser, capturer une vue 360°,
+              puis analyser la scène directement à bord (IA embarquée) et restituer les informations essentielles.
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#solution">
+                <span class="btn__icon">→</span>
+                <span data-i18n="ctaDiscover">Découvrir le projet</span>
+              </a>
+              <a class="btn" href="./progress.html">
+                <span class="btn__icon">▣</span>
+                <span data-i18n="ctaProgress">Accéder aux livrables</span>
+              </a>
+            </div>
+
+            <div class="hero__stats">
+              <div class="stat">
+                <div class="stat__k" data-i18n="stat1k">Capture</div>
+                <div class="stat__v">360°</div>
+              </div>
+              <div class="stat">
+                <div class="stat__k" data-i18n="stat2k">Analyse</div>
+                <div class="stat__v" data-i18n="stat2v">IA locale</div>
+              </div>
+              <div class="stat">
+                <div class="stat__k" data-i18n="stat3k">Objectif</div>
+                <div class="stat__v" data-i18n="stat3v">Réduction du risque</div>
+              </div>
+            </div>
+
+            <div class="callout callout--soft">
+              <div class="callout__icon">⚡</div>
+              <div>
+                <div class="callout__title" data-i18n="calloutTitle">Principe</div>
+                <div class="callout__text" data-i18n="calloutText">
+                  “Voir avant d’entrer” : obtenir une situation claire de la pièce, en quelques secondes.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__right">
+            <div class="hero__media panel panel--soft">
+              <div class="panel__header">
+                <div class="panel__title" data-i18n="heroPreviewTitle">Aperçu</div>
+                <div class="panel__dots"><span></span><span></span><span></span></div>
+              </div>
+              <div class="panel__body">
+                <figure class="media">
+                  <img src="./assets/img/hero_drone.png" alt="Illustration drone" />
+                  <figcaption class="muted" data-i18n="heroPreviewCaption">
+                    Illustration (remplace par une photo/3D si besoin).
+                  </figcaption>
+                </figure>
+
+                <div class="chips">
+                  <span class="chip">OpenCV</span>
+                  <span class="chip">YOLOv8</span>
+                  <span class="chip">Mediapipe</span>
+                  <span class="chip">Dataset</span>
+                  <span class="chip">Raspberry Pi</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero__aside cards cards--2 cards--tight">
+              <div class="card card--mini reveal">
+                <div class="card__top">
+                  <span class="badge badge--ok">1</span>
+                  <h3 data-i18n="heroMini1">Déploiement rapide</h3>
+                </div>
+                <p data-i18n="heroMini1d">Un lancé, stabilisation, capture — sans exposer l’humain.</p>
+              </div>
+              <div class="card card--mini reveal">
+                <div class="card__top">
+                  <span class="badge badge--warn">2</span>
+                  <h3 data-i18n="heroMini2">Décision assistée</h3>
+                </div>
+                <p data-i18n="heroMini2d">IA + overlay (bbox/labels) pour interpréter vite.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROBLEMATIQUE -->
+      <section id="problematique" class="section section--alt">
+        <div class="container">
+          <div class="section__head">
+            <h2 data-i18n="problemTitle">Problématique</h2>
+            <p class="muted" data-i18n="problemSub">
+              Les interventions en milieu inconnu exposent les équipes à des risques immédiats.
+            </p>
+          </div>
+
+          <div class="cards cards--3">
+            <div class="card reveal">
+              <div class="card__top">
+                <span class="badge badge--primary">A</span>
+                <h3 data-i18n="problem1t">Danger à l’entrée</h3>
+              </div>
+              <p data-i18n="problem1d">
+                Entrer sans visibilité : pièges, présence hostile, angles morts, obstacles.
+              </p>
+              <ul class="list">
+                <li data-i18n="problem1l1">Angles morts</li>
+                <li data-i18n="problem1l2">Mauvaise appréciation des distances</li>
+                <li data-i18n="problem1l3">Réaction tardive</li>
+              </ul>
+            </div>
+
+            <div class="card reveal">
+              <div class="card__top">
+                <span class="badge badge--primary">B</span>
+                <h3 data-i18n="problem2t">Temps critique</h3>
+              </div>
+              <p data-i18n="problem2d">
+                Même quelques secondes comptent : chaque hésitation augmente le risque.
+              </p>
+              <ul class="list">
+                <li data-i18n="problem2l1">Informations incomplètes</li>
+                <li data-i18n="problem2l2">Communication difficile</li>
+                <li data-i18n="problem2l3">Décision sous stress</li>
+              </ul>
+            </div>
+
+            <div class="card reveal">
+              <div class="card__top">
+                <span class="badge badge--primary">C</span>
+                <h3 data-i18n="problem3t">Outils limités</h3>
+              </div>
+              <p data-i18n="problem3d">
+                Caméras fixes ou drones “classiques” : pas toujours adaptés à l’intérieur.
+              </p>
+              <ul class="list">
+                <li data-i18n="problem3l1">Stabilisation difficile</li>
+                <li data-i18n="problem3l2">Peu d’info structurée</li>
+                <li data-i18n="problem3l3">Intégration lourde</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="quote reveal">
+            <div class="quote__icon">“</div>
+            <div>
+              <div class="quote__text" data-i18n="problemQuote">
+                Avoir une vue fiable de la pièce avant d’entrer peut éviter une décision irréversible.
+              </div>
+              <div class="quote__meta muted" data-i18n="problemQuoteMeta">Constat projet — Over Sight</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOLUTION -->
+      <section id="solution" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2 data-i18n="solutionTitle">Notre solution</h2>
+            <p class="muted" data-i18n="solutionSub">
+              Un mini-drone autonome qui embarque la capture + l’IA. Les résultats sont ensuite restitués à l’opérateur (modalités en cours de définition).
+            </p>
+          </div>
+
+          <div class="split">
+            <div class="split__a">
+              <div class="panel panel--soft reveal">
+                <div class="panel__header">
+                  <div class="panel__title" data-i18n="solutionPanelTitle">Vue d’ensemble</div>
+                  <div class="panel__dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="panel__body">
+                  <p data-i18n="solutionP1">
+                    Le drone est projeté dans une pièce. Il se stabilise en vol et capture un panorama 360°.
+                    Le traitement IA s’exécute directement sur le drone, afin de réduire la latence et éviter une dépendance à une station externe.
+                  </p>
+                  <p data-i18n="solutionP2">
+                    Le système produit un rendu exploitable : détections (bbox/labels), indicateurs (FPS),
+                    et éventuellement identification via dataset selon le mode choisi.
+                  </p>
+
+                  <div class="badges">
+                    <span class="badge badge--ok" data-i18n="solutionB1">Stabilisation</span>
+                    <span class="badge badge--warn" data-i18n="solutionB2">Vision 360°</span>
+                    <span class="badge badge--primary" data-i18n="solutionB3">Analyse IA</span>
+                    <span class="badge badge--ghost" data-i18n="solutionB4">Restitution</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cards cards--2 cards--tight">
+                <div class="card reveal">
+                  <div class="card__top">
+                    <span class="badge badge--primary">Drone</span>
+                    <h3 data-i18n="solutionDroneTitle">Plateforme de capture</h3>
+                  </div>
+                  <p data-i18n="solutionDroneDesc">
+                    Caméra 360°, stabilisation, mécanique robuste, autonomie courte mais suffisante.
+                  </p>
+                </div>
+
+                <div class="card reveal">
+                  <div class="card__top">
+                    <span class="badge badge--primary" data-i18n="solutionBoxBadge">Restitution</span>
+                    <h3 data-i18n="solutionBoxTitle">Rendu & preuves</h3>
+                  </div>
+                  <p data-i18n="solutionBoxDesc">
+                    Overlay temps réel, modes de démo, outils dataset, logs et export.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="split__b">
+              <div class="panel panel--soft reveal">
+                <figure class="media media--tall">
+                  <div class="solution-visual">
+                    <img src="assets/img/solution_overview.png" alt="Vue d’ensemble de la solution Over Sight">
+                  </div>
+                  <figcaption class="muted" data-i18n="solutionFig">
+                    Schéma conceptuel (drone : capture + IA → restitution).
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="callout reveal">
+                <div class="callout__icon">🛡️</div>
+                <div>
+                  <div class="callout__title" data-i18n="solutionSafetyTitle">Bénéfice principal</div>
+                  <div class="callout__text" data-i18n="solutionSafetyText">
+                    Réduire l’exposition directe : reconnaissance d’une pièce sans engager une présence humaine immédiate.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FONCTIONNEMENT -->
+      <section id="fonctionnement" class="section section--alt">
+        <div class="container">
+          <div class="section__head">
+            <h2 data-i18n="howTitle">Fonctionnement</h2>
+            <p class="muted" data-i18n="howSub">
+              Du lancement à la décision : 4 étapes simples, reproductibles.
+            </p>
+          </div>
+
+          <div class="timeline">
+            <div class="step reveal">
+              <div class="step__icon">①</div>
+              <div class="step__body">
+                <h3 data-i18n="how1t">Déploiement</h3>
+                <p data-i18n="how1d">
+                  L’opérateur projette le drone dans la pièce. Objectif : mise en l’air + stabilisation rapide.
+                </p>
+              </div>
+            </div>
+
+            <div class="step reveal">
+              <div class="step__icon">②</div>
+              <div class="step__body">
+                <h3 data-i18n="how2t">Capture 360°</h3>
+                <p data-i18n="how2d">
+                  Prise de vue panoramique (photo/flux). Le format 360° réduit les angles morts.
+                </p>
+              </div>
+            </div>
+
+            <div class="step reveal">
+              <div class="step__icon">③</div>
+              <div class="step__body">
+                <h3 data-i18n="how3t">Traitement IA</h3>
+                <p data-i18n="how3d">
+                  Détection (YOLO), reconnaissance faciale, et éventuellement gestes/pose. Overlay lisible.
+                </p>
+              </div>
+            </div>
+
+            <div class="step reveal">
+              <div class="step__icon">④</div>
+              <div class="step__body">
+                <h3 data-i18n="how4t">Affichage & décision</h3>
+                <p data-i18n="how4d">
+                  Les informations clés sont restituées à l’équipe (overlay + métriques). Décision avec plus de contexte.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel--soft reveal" style="margin-top:18px;">
+            <div class="panel__header">
+              <div class="panel__title" data-i18n="howDiagramTitle">Schéma simplifié</div>
+              <div class="panel__dots"><span></span><span></span><span></span></div>
+            </div>
+            <div class="panel__body">
+              <img class="img img--full" src="./assets/img/flow_diagram.png" alt="Schéma capture→IA→affichage" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ARCHITECTURE -->
+      <section id="architecture" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2 data-i18n="archTitle">Architecture</h2>
+            <p class="muted" data-i18n="archSub">
+              Matériel et logiciel s’articulent autour d’une chaîne courte : capturer, analyser embarqué, restituer.
+            </p>
+          </div>
+
+          <div class="cards cards--3">
+            <div class="card reveal">
+              <div class="card__top">
+                <span class="badge badge--primary" data-i18n="archCard1b">Drone</span>
+                <h3 data-i18n="archCard1t">Capture & stabilité</h3>
+              </div>
+              <p data-i18n="archCard1d">
+                Caméra 360° + stabilisation (IMU). Le drone doit tenir sa position pour un rendu exploitable.
+              </p>
+              <div class="hr"></div>
+              <div class="muted" data-i18n="archCard1m">À intégrer : lidar pour distance/altitude.</div>
+            </div>
+
+            <div class="card reveal">
+              <div class="card__top">
+                <span class="badge badge--primary" data-i18n="archCard2b">IA embarquée</span>
+                <h3 data-i18n="archCard2t">Traitement à bord</h3>
+              </div>
+              <p data-i18n="archCard2d">
+                Analyse IA directement sur le drone (YOLO/OpenCV). Compromis : puissance, chaleur et autonomie.
+              </p>
+              <div class="hr"></div>
+              <div class="muted" data-i18n="archCard2m">Cible : Raspberry Pi (reçu) embarqué sur le drone. Lidar à venir.</div>
+            </div>
+
+            <div class="card reveal">
+              <div class="card__top">
+                <span class="badge badge--primary" data-i18n="archCard3b">Restitution</span>
+                <h3 data-i18n="archCard3t">Rendu & export</h3>
+              </div>
+              <p data-i18n="archCard3d">
+                Snapshots, overlay et logs/export pour prouver les livrables. Modalités de restitution à préciser.
+              </p>
+              <div class="hr"></div>
+              <div class="muted" data-i18n="archCard3m">Objectif : un retour clair, minimal, exploitable.</div>
+            </div>
+          </div>
+
+          <div class="panel panel--soft reveal" style="margin-top:18px;">
+            <div class="panel__header">
+              <div class="panel__title" data-i18n="archDiagramTitle">Diagramme d’architecture</div>
+              <div class="panel__dots"><span></span><span></span><span></span></div>
+            </div>
+            <div class="panel__body">
+              <img class="img img--full" src="./assets/img/architecture_diagram.svg" alt="Diagramme architecture" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section id="features" class="section section--alt">
+        <div class="container">
+          <div class="section__head">
+            <h2 data-i18n="featTitle">Caractéristiques clés</h2>
+            <p class="muted" data-i18n="featSub">
+              Ce qui rend Over Sight utile en intérieur : automatisation, lecture rapide, robustesse.
+            </p>
+          </div>
+
+          <div class="cards cards--3">
+            <div class="card reveal">
+              <div class="card__top">
+                <span class="badge badge--ok" data-i18n="feat1b">Auto</span>
+                <h3 data-i18n="feat1t">Déplacement autonome</h3>
+              </div>
+              <p data-i18n="feat1d">Stabilité et trajectoire contrôlée pour une capture exploitable.</p>
+            </div>
+
+            <div class="card reveal">
+              <div class="card__top">
+                <span class="badge badge--warn" data-i18n="feat2b">IA</span>
+                <h3 data-i18n="feat2t">Analyse en temps réel</h3>
+              </div>
+              <p data-i18n="feat2d">Détection (personnes/objets/pose) + overlay clair pour décider vite.</p>
+            </div>
+
+            <div class="card reveal">
+              <div class="card__top">
+                <span class="badge badge--primary" data-i18n="feat3b">Robuste</span>
+                <h3 data-i18n="feat3t">Résistance</h3>
+              </div>
+              <p data-i18n="feat3d">Conçu pour encaisser : chocs, poussière, contraintes d’intérieur.</p>
+            </div>
+
+            <div class="card reveal">
+              <div class="card__top">
+                <span class="badge badge--ghost" data-i18n="feat4b">360°</span>
+                <h3 data-i18n="feat4t">Vision panoramique</h3>
+              </div>
+              <p data-i18n="feat4d">Réduit les angles morts et facilite la compréhension de la scène.</p>
+            </div>
+
+            <div class="card reveal">
+              <div class="card__top">
+                <span class="badge badge--ghost" data-i18n="feat5b">UX</span>
+                <h3 data-i18n="feat5t">Affichage lisible</h3>
+              </div>
+              <p data-i18n="feat5d">Informations utiles, pas de bruit : bbox, labels, compteur, FPS.</p>
+            </div>
+
+            <div class="card reveal">
+              <div class="card__top">
+                <span class="badge badge--ghost" data-i18n="feat6b">Modulaire</span>
+                <h3 data-i18n="feat6t">Évolutif</h3>
+              </div>
+              <p data-i18n="feat6d">Modules indépendants : remplacer un bloc sans casser le reste.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ROADMAP -->
+      <section id="roadmap" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2 data-i18n="roadTitle">Évolutions futures</h2>
+            <p class="muted" data-i18n="roadSub">
+              Prolonger l’utilité terrain : meilleure visibilité, meilleure communication, ergonomie.
+            </p>
+          </div>
+
+          <div class="cards cards--3">
+            <div class="card reveal">
+              <div class="card__top">
+                <span class="badge badge--primary">1</span>
+                <h3 data-i18n="road1t">Flash lumineux ou caméra thermique</h3>
+              </div>
+              <p data-i18n="road1d">Intégration d’un flash / d’une caméra thermique pour voir en environnement sombre.</p>
+            </div>
+
+            <div class="card reveal">
+              <div class="card__top">
+                <span class="badge badge--primary">2</span>
+                <h3 data-i18n="road2t">Communication sans fil renforcée</h3>
+              </div>
+              <p data-i18n="road2d">Amélioration de la portée et de la fiabilité de la transmission sans fil.</p>
+            </div>
+
+            <div class="card reveal">
+              <div class="card__top">
+                <span class="badge badge--primary">3</span>
+                <h3 data-i18n="road3t">Optimisation ergonomique</h3>
+              </div>
+              <p data-i18n="road3d">Le rendre plus léger, plus facile à lancer (prise en main et usage terrain).</p>
+            </div>
+          </div>
+
+          <div class="ctaBlock reveal">
+            <div>
+              <h3 data-i18n="roadCtaTitle">Envie de voir ce qui est déjà fait ?</h3>
+              <p class="muted" data-i18n="roadCtaSub">
+                La page “Avancement” regroupe les modes de démo, scripts et captures à rendre.
+              </p>
+            </div>
+            <a class="btn btn--primary" href="./progress.html">
+              <span class="btn__icon">▣</span>
+              <span data-i18n="roadCtaBtn">Ouvrir l’avancement</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section section--alt">
+        <div class="container">
+          <div class="section__head">
+            <h2 data-i18n="faqTitle">Questions fréquentes</h2>
+            <p class="muted" data-i18n="faqSub">Pour cadrer le projet et éviter les confusions.</p>
+          </div>
+
+          <div class="faq">
+            <details class="faq__item reveal" open>
+              <summary data-i18n="faq1q">Pourquoi embarquer l’IA sur le drone ?</summary>
+              <div class="faq__a muted" data-i18n="faq1a">Pour réduire la latence et éviter de dépendre d’un boîtier externe. Le compromis : puissance, chaleur et autonomie — à optimiser.</div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary data-i18n="faq2q">Quels sont les traitements IA visés ?</summary>
+              <div class="faq__a muted" data-i18n="faq2a">
+                Détection de personnes/objets (YOLO), reconnaissance faciale (si dataset), et modes complémentaires
+                (pose/gestes) selon les besoins.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary data-i18n="faq3q">Le matériel est-il complet ?</summary>
+              <div class="faq__a muted" data-i18n="faq3a">
+                Raspberry Pi reçu et configuré. Il manque encore le lidar pour compléter la partie capteurs.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footerBig">
+        <div class="container footerBig__inner">
+          <div class="footerBig__brand">
+            <div class="brand__mark">◎</div>
+            <div>
+              <div class="footerBig__title">Over Sight</div>
+              <div class="muted" data-i18n="footerTagline">
+                Reconnaissance d’intérieur — capture 360° + IA.
+              </div>
+            </div>
+          </div>
+
+          <div class="footerBig__links">
+            <a class="link" href="#top" data-i18n="footerTop">Retour en haut</a>
+            <a class="link" href="./progress.html" data-i18n="footerProgress">Avancement</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <button id="toTop" class="toTop" type="button" aria-label="Retour en haut">↑</button>
+    <script src="./assets/js/app.js" defer></script>
+  </body>
+</html>

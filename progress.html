@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Over Sight — avancement, livrables et modes de démo." />
+    <title>Over Sight — Avancement</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+
+  <body id="top" class="page page--progress">
+    <div class="bg-orbs" aria-hidden="true">
+      <div class="orb orb--a"></div>
+      <div class="orb orb--b"></div>
+      <div class="orb orb--c"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="./index.html" aria-label="Over Sight">
+          <div class="brand__mark">◎</div>
+          <div class="brand__text">Over Sight</div>
+          <span class="badge badge--primary" data-i18n="badgeProgress">Avancement</span>
+        </a>
+
+        <nav class="nav">
+          <a class="nav__link" href="./index.html" data-i18n="navBackPresentation">Présentation</a>
+          <a class="nav__link" href="#livrables" data-i18n="navDeliverables">Livrables</a>
+          <a class="nav__link" href="#modes" data-i18n="navModes">Modes</a>
+          <a class="nav__link" href="#docs" data-i18n="navDocs">Docs</a>
+          <a class="nav__link" href="#equipe" data-i18n="navTeam">Équipe</a>
+        </nav>
+
+        <div class="topbar__actions">
+          <button class="btn btn--ghost" id="langToggle" type="button" aria-label="Change language">
+            <span class="btn__icon">🌐</span>
+            <span id="langLabel">FR</span>
+          </button>
+
+          <button class="btn btn--ghost" id="themeToggle" type="button" aria-label="Toggle theme">
+            <span class="btn__icon">◐</span>
+            <span data-i18n="theme">Thème</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero hero--compact">
+        <div class="container hero__grid">
+          <div>
+            <div class="kicker">
+              <span class="dot"></span>
+              <span data-i18n="progressKicker">Ce qui a été produit / démontrable</span>
+            </div>
+
+            <h1 class="hero__title hero__title--small">
+              <span class="grad" data-i18n="progressTitle">Livrables & Démos</span>
+            </h1>
+
+            <p class="hero__subtitle" data-i18n="progressSubtitle">
+              Cette page regroupe les livrables concrets : scripts, modes de démo via launcher, captures, et docs.
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#modes">
+                <span class="btn__icon">▣</span>
+                <span data-i18n="progressCtaModes">Voir les modes</span>
+              </a>
+              <a class="btn" href="#docs">
+                <span class="btn__icon">📄</span>
+                <span data-i18n="ctaDocs">Lire la doc</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="panel panel--soft hero__media">
+            <div class="panel__header">
+              <div class="panel__title" data-i18n="progressPanelTitle">À mettre à jour</div>
+              <div class="panel__dots"><span></span><span></span><span></span></div>
+            </div>
+            <div class="panel__body">
+              <ul class="list">
+                <li data-i18n="progressTodo1">Remplacer les SVG par tes screenshots (1 par mode)</li>
+                <li data-i18n="progressTodo2">Vérifier les liens vers docs (chemin du repo)</li>
+                <li data-i18n="progressTodo3">Optionnel : ajouter une section “résultats”</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="livrables" class="section section--alt">
+        <div class="container">
+          <div class="section__head">
+            <h2 data-i18n="deliverablesTitle">Livrables</h2>
+            <p class="muted" data-i18n="deliverablesSub">
+              Scripts + organisation + preuves visuelles (captures) pour rendre proprement.
+            </p>
+          </div>
+
+          <div class="cards cards--3">
+            <div class="card reveal">
+              <div class="card__top">
+                <span class="badge badge--primary">1</span>
+                <h3 data-i18n="delA">Logiciel</h3>
+              </div>
+              <p data-i18n="delADesc2">
+                Scripts de vision (YOLO, face, pose, gestes) + orchestration via launcher.
+              </p>
+              <div class="hr"></div>
+              <div class="muted" data-i18n="delAmeta">Point d’entrée unique + modes sélectionnables.</div>
+            </div>
+
+            <div class="card reveal">
+              <div class="card__top">
+                <span class="badge badge--primary">2</span>
+                <h3 data-i18n="delB">Démos</h3>
+              </div>
+              <p data-i18n="delBDesc2">
+                Chaque mode doit avoir une capture pour prouver la fonctionnalité.
+              </p>
+              <div class="hr"></div>
+              <div class="muted" data-i18n="delBmeta">Dossier: website/assets/img/</div>
+            </div>
+
+            <div class="card reveal">
+              <div class="card__top">
+                <span class="badge badge--primary">3</span>
+                <h3 data-i18n="delC">Docs</h3>
+              </div>
+              <p data-i18n="delCDesc2">
+                Matériel, rapport logiciel, documentation technique (Markdown).
+              </p>
+              <div class="hr"></div>
+              <div class="muted" data-i18n="delCmeta">Liens directs plus bas.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="modes" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2 data-i18n="modesTitle">Modes de démo (via le launcher)</h2>
+            <p class="muted" data-i18n="modesSub2">
+              1 capture par mode, avec le nom de fichier indiqué ci‑dessous.
+            </p>
+          </div>
+
+          <div class="toolbar">
+            <div class="search">
+              <span class="search__icon">⌕</span>
+              <input id="modeSearch" type="text" placeholder="Rechercher un mode..." data-i18n-placeholder="searchPh" />
+            </div>
+
+            <div class="filters">
+              <button class="chipbtn is-active" type="button" data-filter="all" data-i18n="filterAll">Tous</button>
+              <button class="chipbtn" type="button" data-filter="tools" data-i18n="filterTools">Outils</button>
+              <button class="chipbtn" type="button" data-filter="face" data-i18n="filterFace">Face</button>
+              <button class="chipbtn" type="button" data-filter="yolo" data-i18n="filterYolo">YOLO</button>
+              <button class="chipbtn" type="button" data-filter="hand" data-i18n="filterHand">Main</button>
+            </div>
+          </div>
+
+          <div id="modesGrid" class="modes"></div>
+        </div>
+      </section>
+
+      <section id="docs" class="section section--alt">
+        <div class="container">
+          <div class="section__head">
+            <h2 data-i18n="docsTitle">Docs</h2>
+            <p class="muted" data-i18n="docsSub">Liens vers les Markdown du repo.</p>
+          </div>
+
+          <div class="docs">
+            <a class="doclink reveal" href="../documentation/Materiel.md" target="_blank" rel="noreferrer">
+              <div class="doclink__k">Materiel.md</div>
+              <div class="doclink__v muted" data-i18n="doc1">Inventaire & choix matériel.</div>
+              <div class="doclink__tag">hardware</div>
+            </a>
+
+            <a class="doclink reveal" href="../documentation/rapport_drone_logiciel.md" target="_blank" rel="noreferrer">
+              <div class="doclink__k">rapport_drone_logiciel.md</div>
+              <div class="doclink__v muted" data-i18n="doc2">Rapport logiciel (POC, pipeline, limites).</div>
+              <div class="doclink__tag">software</div>
+            </a>
+
+            <a class="doclink reveal" href="../documentation/technical_documentation.md" target="_blank" rel="noreferrer">
+              <div class="doclink__k">technical_documentation.md</div>
+              <div class="doclink__v muted" data-i18n="doc3">Documentation technique détaillée.</div>
+              <div class="doclink__tag">tech</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="equipe" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2 data-i18n="teamTitle">Équipe</h2>
+            <p class="muted" data-i18n="teamSub">Liens GitHub</p>
+          </div>
+
+          <div class="team">
+            <div class="member reveal">
+              <div style="display:flex;gap:12px;align-items:center;">
+                <div class="avatar">Q</div>
+                <div class="member__info">
+                  <div class="member__name">Quentin</div>
+                  <div class="member__role">Dev</div>
+                </div>
+              </div>
+              <a class="member__link" href="https://github.com/QuentinCHF" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+
+            <div class="member reveal">
+              <div style="display:flex;gap:12px;align-items:center;">
+                <div class="avatar">R</div>
+                <div class="member__info">
+                  <div class="member__name">Redouane</div>
+                  <div class="member__role">Dev</div>
+                </div>
+              </div>
+              <a class="member__link" href="https://github.com/Michnife" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+
+            <div class="member reveal">
+              <div style="display:flex;gap:12px;align-items:center;">
+                <div class="avatar">M</div>
+                <div class="member__info">
+                  <div class="member__name">Matheo</div>
+                  <div class="member__role">Dev</div>
+                </div>
+              </div>
+              <a class="member__link" href="https://github.com/lolmath06" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+
+          <div class="footer muted">
+            <span>© Over Sight</span>
+            <a class="link" href="./index.html" data-i18n="footerBackToPresentation">Retour présentation</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button id="toTop" class="toTop" type="button" aria-label="Retour en haut">↑</button>
+    <script src="./assets/js/app.js" defer></script>
+  </body>
+</html>
