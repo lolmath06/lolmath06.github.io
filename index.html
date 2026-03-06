@@ -3,12 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Over Sight — mini-drone de reconnaissance : caméra 360°, stabilisation, IA, transmission sécurisée." />
+    <meta
+      name="description"
+      content="Over Sight — mini-drone de reconnaissance indoor : vision 360°, stabilisation, analyse IA et restitution des informations essentielles."
+    />
     <title>Over Sight — Présentation</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
@@ -59,7 +65,6 @@
     </header>
 
     <main>
-      <!-- HERO -->
       <section id="presentation" class="hero hero--big">
         <div class="container hero__grid">
           <div class="hero__left">
@@ -123,8 +128,9 @@
               </div>
               <div class="panel__body">
                 <figure class="media">
-                  <img src="./assets/img/hero_drone.png" alt="Illustration drone" />
+                  <img src="./assets/img/hero_drone.png" alt="Illustration drone Over Sight" />
                   <figcaption class="muted" data-i18n="heroPreviewCaption">
+                    Illustration (remplace par une photo ou un rendu 3D si besoin).
                   </figcaption>
                 </figure>
 
@@ -158,7 +164,6 @@
         </div>
       </section>
 
-      <!-- PROBLEMATIQUE -->
       <section id="problematique" class="section section--alt">
         <div class="container">
           <div class="section__head">
@@ -205,7 +210,7 @@
                 <h3 data-i18n="problem3t">Outils limités</h3>
               </div>
               <p data-i18n="problem3d">
-                Caméras fixes ou drones “classiques” : pas toujours adaptés à l’intérieur.
+                Caméras fixes ou drones classiques : pas toujours adaptés à l’intérieur.
               </p>
               <ul class="list">
                 <li data-i18n="problem3l1">Stabilisation difficile</li>
@@ -227,7 +232,6 @@
         </div>
       </section>
 
-      <!-- SOLUTION -->
       <section id="solution" class="section">
         <div class="container">
           <div class="section__head">
@@ -290,10 +294,10 @@
               <div class="panel panel--soft reveal">
                 <figure class="media media--tall">
                   <div class="solution-visual">
-                    <img src="assets/img/solution_overview.png" alt="Vue d’ensemble de la solution Over Sight">
+                    <img src="./assets/img/solution_overview.png" alt="Vue d’ensemble de la solution Over Sight" />
                   </div>
                   <figcaption class="muted" data-i18n="solutionFig">
-                    Schéma conceptuel (drone : capture + IA → restitution).
+                    Schéma conceptuel : drone, capture, analyse IA et restitution.
                   </figcaption>
                 </figure>
               </div>
@@ -312,7 +316,6 @@
         </div>
       </section>
 
-      <!-- FONCTIONNEMENT -->
       <section id="fonctionnement" class="section section--alt">
         <div class="container">
           <div class="section__head">
@@ -370,13 +373,12 @@
               <div class="panel__dots"><span></span><span></span><span></span></div>
             </div>
             <div class="panel__body">
-              <img class="img img--full" src="./assets/img/flow_diagram.png" alt="Schéma capture→IA→affichage" />
+              <img class="img img--full" src="./assets/img/flow_diagram.png" alt="Schéma capture → IA → restitution" />
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ARCHITECTURE -->
       <section id="architecture" class="section">
         <div class="container">
           <div class="section__head">
@@ -393,10 +395,10 @@
                 <h3 data-i18n="archCard1t">Capture & stabilité</h3>
               </div>
               <p data-i18n="archCard1d">
-                Caméra 360° + stabilisation (IMU). Le drone doit tenir sa position pour un rendu exploitable.
+                Caméra 360°, stabilisation (IMU) et châssis compact pour garder un rendu exploitable.
               </p>
               <div class="hr"></div>
-              <div class="muted" data-i18n="archCard1m">À intégrer : lidar pour distance/altitude.</div>
+              <div class="muted" data-i18n="archCard1m">À intégrer : lidar pour distance / altitude.</div>
             </div>
 
             <div class="card reveal">
@@ -408,7 +410,7 @@
                 Analyse IA directement sur le drone (YOLO/OpenCV). Compromis : puissance, chaleur et autonomie.
               </p>
               <div class="hr"></div>
-              <div class="muted" data-i18n="archCard2m">Cible : Raspberry Pi (reçu) embarqué sur le drone. Lidar à venir.</div>
+              <div class="muted" data-i18n="archCard2m">Cible : Raspberry Pi reçu et configuré. Lidar encore attendu.</div>
             </div>
 
             <div class="card reveal">
@@ -430,13 +432,12 @@
               <div class="panel__dots"><span></span><span></span><span></span></div>
             </div>
             <div class="panel__body">
-              <img class="img img--full" src="./assets/img/architecture_diagram.svg" alt="Diagramme architecture" />
+              <img class="img img--full" src="./assets/img/architecture_diagram.png" alt="Diagramme d’architecture Over Sight" />
             </div>
           </div>
         </div>
       </section>
 
-      <!-- FEATURES -->
       <section id="features" class="section section--alt">
         <div class="container">
           <div class="section__head">
@@ -498,7 +499,6 @@
         </div>
       </section>
 
-      <!-- ROADMAP -->
       <section id="roadmap" class="section">
         <div class="container">
           <div class="section__head">
@@ -549,7 +549,6 @@
         </div>
       </section>
 
-      <!-- FAQ -->
       <section id="faq" class="section section--alt">
         <div class="container">
           <div class="section__head">
